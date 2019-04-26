@@ -1,6 +1,6 @@
 const App = require('@octokit/app')
 const Octokit = require('@octokit/rest')
-const { lstatSync, readdirSync, appendFileSync, existsSync, mkdirSync, writeFileSync } = require('fs');
+const { lstatSync, readdirSync, appendFileSync, existsSync, mkdirSync, writeFileSync, readFileSync } = require('fs');
 const { join } = require('path');
 
 const owner = "marchuanv";
@@ -11,6 +11,9 @@ const octokit = new Octokit({
   auth: () => app.getInstallationAccessToken({ installationId: 869338 })
 });
 
+const gitIgnorePath = join(__dirname,".gitignore");
+const gitIgnoreContent = readFileSync(gitIgnorePath,"utf8")
+
 octokit.repos.listForUser({
   username: owner
 }).then(({ data }) => {
@@ -18,7 +21,10 @@ octokit.repos.listForUser({
         const repoFilePath = join(__dirname, repoName);
         if (existsSync(repoFilePath)===false){
             mkdirSync(repoName);
-            appendFileSync('.gitignore',`\n${repoName}/`);
+            const ignorePhrase=`\n${repoName}/`;
+            if (gitIgnoreContent.indexOf(ignorePhrase)===-1) {
+                appendFileSync(gitIgnorePath, ignorePhrase);
+            }
         }
         octokit.repos.getContents({
           owner,

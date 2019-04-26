@@ -21,7 +21,6 @@
     "@octokit/rest": "^16.25.0"
   },
   "scripts": {
-    "gitcommitall": "node gitaddall.js",
-    "gitaddall": "node gitcommitall.js"
+    "gitcheckout": "node checkout.js"
   }
 }
