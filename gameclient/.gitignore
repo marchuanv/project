@@ -1,9 +1,0 @@
-node_modules/
-release/config/*.js
-release/designer/*.js
-release/game/*.js
-release/*.*
-downloads/*.js
-downloads/*.zip
-downloads/*.archive
-api.json
