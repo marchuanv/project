@@ -1,0 +1,33 @@
+{
+  "name": "gamedesigner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "preinstall": "npm update",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "6.8.1",
+    "npm" : "3.10.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marchuanv/gamedesigner.git"
+  },
+  "author": "marchuanv@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marchuanv/gamedesigner/issues"
+  },
+  "homepage": "https://github.com/marchuanv/gamedesigner#readme",
+  "dependencies": {
+    "utils": "git+https://github.com/marchuanv/utils.git",
+    "messagebus": "git+https://github.com/marchuanv/messagebus.git",
+    "archiver": "^2.0.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.2",
+    "js-beautify": "^1.6.12",
+    "uglify-js": "^3.0.23"
+  }
+}

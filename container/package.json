@@ -1,0 +1,27 @@
+{
+  "name": "container",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marchuanv/container.git"
+  },
+  "author": "marchuan van der merwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marchuanv/container/issues"
+  },
+  "homepage": "https://github.com/marchuanv/container#readme",
+  "dependencies": {
+    "@octokit/rest": "16.16.0",
+    "ws": "^6.2.1"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "preinstall": "npm update"
+  }
+}

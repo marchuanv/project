@@ -1,0 +1,30 @@
+{
+	"username":"marchuanv",
+    "name": "eventpublisher",
+    "version": "1.0.0",
+    "host":"eventpublisher.herokuapp.com",
+	"port":"443",
+    "description": "",
+    "engines": {
+        "node": "8.11.3",
+        "npm": "4.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/marchuanv/eventpublisher.git"
+    },
+    "author": "Marchuan Van Der Merwe",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/marchuanv/eventpublisher/issues"
+    },
+    "homepage": "https://github.com/marchuanv/eventpublisher#readme",
+    "files":{
+        "systemevent": "lib/systemevent.js",
+        "publisher": "lib/publisher.js",
+        "google": "lib/google.js"
+    },
+    "dependencies": {
+        "communication": "git+https://github.com/marchuanv/communication.git"
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "budget",
+  "username":"marchuanv",
+  "host":"marchuanv.herokuapp.com",
+	"port":"443",
+  "version": "1.0.0",
+  "description": "Daily spend limit",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/marchuanv/budget.git"
+  },
+  "author": "Marchuan Van Der Merwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marchuanv/budget/issues"
+  },
+  "homepage": "https://github.com/marchuanv/budget#readme",
+  "files":{
+      "balance": "lib/balance.js",
+      "budget": "lib/budget.js",
+      "index" : "index.html",
+      "styles" : "styles.css"
+  },
+  "dependencies": {
+      "eventpublisher": "git+https://github.com/marchuanv/eventpublisher.git"
+  }
+}

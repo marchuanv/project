@@ -1,0 +1,27 @@
+{
+	"username":"marchuanv",
+  "name": "warplan",
+  "version": "1.0.0",
+  "host":"warplan.herokuapp.com",
+	"port":"443",
+  "description": "Warhammer",
+  "main": "",
+	"protocol":"https",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/marchuanv/warplan.git"
+  },
+  "remotemodules": [
+	  "utils-api"
+  ],
+  "author": "Marchuan Van Der Merwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marchuanv/warplan/issues"
+  },
+  "homepage": "https://github.com/marchuanv/warplan#readme"
+}

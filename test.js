@@ -22,7 +22,11 @@ octokit.repos.listForUser({
         }).then(async({ data }) => {
             for(const metadata of data){
                 const newFilePath = join(__dirname, repoName, metadata.path);
+
                 if (existsSync(newFilePath)===false){
+                    if (existsSync(join(__dirname, repoName))===false){
+                        mkdirSync(repoName);
+                    }
                     if (metadata.type === "dir"){
                         console.log("creating directory: ",newFilePath);
                         mkdirSync(newFilePath);

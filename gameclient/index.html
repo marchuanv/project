@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Game Client</title>
+		<script type="text/javascript" src="https://rawgit.com/marchuanv/messagebus/master/messagebus.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			const api=new MessageBusAPI("", "http://localhost:6000", "http://localhost:3000", false);
+			api.initialise(function ready() {
+				console.log("game ready");
+			});
+
+			api.registerLibrary({
+				javascript: "function Test(){}",
+				isClass: true
+			});
+
+		</script>
+	</body>
+</html>
