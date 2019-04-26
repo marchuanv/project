@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marchuanv/project.git"
+  },
+  "author": "marchuan van der merwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marchuanv/project/issues"
+  },
+  "homepage": "https://github.com/marchuanv/project#readme",
+  "dependencies": {
+    "@octokit/app": "^2.2.4",
+    "@octokit/rest": "^16.25.0"
+  },
+  "scripts": {
+    "gitcommitall": "node gitaddall.js",
+    "gitaddall": "node gitcommitall.js"
+  }
+}
