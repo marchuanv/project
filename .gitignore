@@ -59,3 +59,13 @@ typings/
 
 # next.js build output
 .next
+budget/
+communication/
+container/
+eventpublisher/
+ferryferret/
+gameclient/
+gamedesigner/
+project/
+utils/
+warplan/

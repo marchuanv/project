@@ -1,6 +1,6 @@
 const App = require('@octokit/app')
 const Octokit = require('@octokit/rest')
-const { lstatSync, readdirSync, existsSync, mkdirSync, writeFileSync } = require('fs');
+const { lstatSync, readdirSync, appendFileSync, existsSync, mkdirSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
 const owner = "marchuanv";
@@ -15,6 +15,11 @@ octokit.repos.listForUser({
   username: owner
 }).then(({ data }) => {
     for(const repoName of data.map(x=>x.name)){
+        const repoFilePath = join(__dirname, repoName);
+        if (existsSync(repoFilePath)===false){
+            mkdirSync(repoName);
+            appendFileSync('.gitignore',`\n${repoName}/`);
+        }
         octokit.repos.getContents({
           owner,
           repo: repoName,
@@ -22,11 +27,7 @@ octokit.repos.listForUser({
         }).then(async({ data }) => {
             for(const metadata of data){
                 const newFilePath = join(__dirname, repoName, metadata.path);
-
                 if (existsSync(newFilePath)===false){
-                    if (existsSync(join(__dirname, repoName))===false){
-                        mkdirSync(repoName);
-                    }
                     if (metadata.type === "dir"){
                         console.log("creating directory: ",newFilePath);
                         mkdirSync(newFilePath);
